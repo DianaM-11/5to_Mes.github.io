@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cine para dos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Audio oculto para música de fondo -->
+  <audio id="musica" preload="auto" loop>
+    <source src="music/POR VERTE FELIZ.mp3" type="audio/mpeg">
+  </audio>
+
+  <header class="topbar">
+  <div class="logo">Abigail & <span>Diana</span></div>
+  <nav class="nav">
+    <a href="#peliculas">Películas</a>
+    <a href="#playlist">Playlist</a>
+    <a href="#videos">Mini videos</a>
+    <a href="#carta">Carta</a>
+  </nav>
+  <button class="menu-toggle" aria-label="Abrir menú">
+    &#9776; <!-- icono hamburguesa -->
+  </button>
+</header>
+
+<!-- Menú lateral -->
+<nav class="side-menu" aria-hidden="true">
+  <a href="#peliculas" class="side-link">Películas</a>
+  <a href="#playlist" class="side-link">Playlist</a>
+  <a href="#videos" class="side-link">Mini videos</a>
+  <a href="#carta" class="side-link">Carta</a>
+</nav>
+
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Noche de cine para nosotras ❤️</h1>
+      <p>Un Netflix privado con todo lo que quiero ver contigo.</p>
+      <div class="hero-cta">
+        <button class="btn play-letter" data-action="open-letter">▶ Play: nuestra carta</button>
+        <button class="btn secondary" data-action="start-music">♪ Encender música</button>
+      </div>
+      <small class="hint">Tip: haz clic en cualquier parte para encender la música.</small>
+    </div>
+  </section>
+
+  <!-- FILAS estilo Netflix -->
+  <main>
+    <!-- PELÍCULAS -->
+    <section class="row" id="peliculas">
+      <h2>🎬 Películas que quiero ver contigo</h2>
+        <div class="cards scroller" data-section="peliculas">
+          <article class="card" data-type="movie" data-title="Happy Feet" data-desc="Bailar y reír como pingüinitas enamoradas." data-video="https://www.youtube.com/embed/NF75QyhWmBs" style="--bg:url('img/1.jpg')"></article>
+          <article class="card" data-type="movie" data-title="El Rey León" data-desc="Cantar ‘Hakuna Matata’ contigo a todo pulmón." data-video="https://www.youtube.com/embed/sfXPGuZ68HM" style="--bg:url('img/2.jpg')"></article>
+          <article class="card" data-type="movie" data-title="La La Land" data-desc="Bailar bajo las estrellas y soñar juntas." data-video="https://www.youtube.com/embed/0pdqf4P9MB8" style="--bg:url('img/3.jpg')"></article>
+          <article class="card" data-type="movie" data-title="Your Name" data-desc="Porque incluso en mundos distintos, nos encontramos." data-video="https://www.youtube.com/embed/xU47nhruN-Q" style="--bg:url('img/4.jpg')"></article>
+          <article class="card" data-type="movie" data-title="About Time" data-desc="Viajemos por el tiempo… pero siempre juntas." data-video="https://www.youtube.com/embed/T7A810duHvw" style="--bg:url('img/5.jpg')"></article>
+          <article class="card" data-type="movie" data-title="Wall•E" data-desc="Dos almas que se encuentran entre estrellas." data-video="https://www.youtube.com/embed/CZ1CATNbXg0" style="--bg:url('img/6.jpeg')"></article>
+          <article class="card" data-type="movie" data-title="Up: Una aventura de altura" data-desc="Viajemos juntas en nuestra propia casa con globos." data-video="https://www.youtube.com/embed/ORFWdXl_zJ4" style="--bg:url('img/7.jpeg')"></article>
+          <article class="card" data-type="movie" data-title="Enredados" data-desc="Un cuento de hadas… pero con nosotras dos." data-video="https://www.youtube.com/embed/2f516ZLyC6U" style="--bg:url('img/8.jpg')"></article>
+        </div>
+
+      <button class="scroll-btn left" aria-label="izquierda">‹</button>
+      <button class="scroll-btn right" aria-label="derecha">›</button>
+    </section>
+
+    <!-- PLAYLIST -->
+    <section class="row" id="playlist">
+    <h2>🎶 Nuestra playlist de amor</h2>
+      <div class="cards scroller" data-section="playlist"  id="video-container">
+        <article class="card square" data-type="song" data-title="Y que me pasa - Mickey Taveras" data-song="https://www.youtube.com/embed/BhIiJ8Flehw" data-desc="Cuando el corazón no entiende razones, solo siente." style="--bg:url('img/Playlist.png')"></article>
+        <article class="card square" data-type="song" data-title="Brillas - León Larregui" data-song="https://www.youtube.com/embed/MzNduKt0ylU" data-desc="Tu luz ilumina hasta los días más grises." style="--bg:url('img/Playlist.png')"></article>
+        <article class="card square" data-type="song" data-title="Para Siempre - Kany García" data-song="https://www.youtube.com/embed/GW6KlZTy_i4" data-desc="Un amor que no conoce tiempo ni distancia." style="--bg:url('img/Playlist.png')"></article>
+        <article class="card square" data-type="song" data-title="Die With a Smile - Lady Gaga" data-song="https://www.youtube.com/embed/zgaCZOQCpp8" data-desc="Vive y ama con alegría, hasta el último latido." style="--bg:url('img/Playlist.png')"></article>
+        <article class="card square" data-type="song" data-title="Mi Meta Contigo - Los Sebastines" data-song="https://www.youtube.com/embed/X-lcRRe1MCc" data-desc="Juntos, el sueño más hermoso por alcanzar." style="--bg:url('img/Playlist.png')"></article>
+        <article class="card square" data-type="song" data-title="Caminar de Tu Mano - Río Roma" data-song="https://www.youtube.com/embed/86JxHkAVGVc" data-desc="Cada paso contigo es un regalo del destino." style="--bg:url('img/Playlist.png')"></article>
+        <article class="card square" data-type="song" data-title="Tan Enamorados - Ricardo Montaner" data-song="https://www.youtube.com/embed/LWn3y3jaUf0" data-desc="Cuando el amor es tan fuerte que todo brilla." style="--bg:url('img/Playlist.png')"></article>
+        <article class="card square" data-type="song" data-title="Agüita de Coco - Kany García" data-song="https://www.youtube.com/embed/chovfjVGrBI" data-desc="Frescura y ternura en cada nota y mirada." style="--bg:url('img/Playlist.png')"></article>
+        <article class="card square" data-type="song" data-title="Te Encontré - El Vega" data-song="https://www.youtube.com/embed/T8jBwgD6gxI" data-desc="El destino nos juntó para no soltarnos jamás." style="--bg:url('img/Playlist.png')"></article>
+      </div>
+
+
+      <button class="scroll-btn left" aria-label="izquierda">‹</button>
+      <button class="scroll-btn right" aria-label="derecha">›</button>
+    </section>
+
+    <!-- MINI VIDEOS -->
+    <section class="row" id="videos">
+      <h2>📹 Videos que te diran un poco de lo mucho que siento por ti </h2>
+      <div class="cards scroller" data-section="videos">
+        <!-- Pon tus propios videos en /videos y cambia los nombres -->
+        <article class="card" data-type="video" data-title="TE AMO" data-file="videos/1.mp4" style="--bg:url('img/A y D.jpg')"></article>
+        <article class="card" data-type="video" data-title="ERES MI TODO" data-file="videos/2.mp4" style="--bg:url('img/A y D.jpg')"></article>
+        <article class="card" data-type="video" data-title="DUEÑA DE MI VIDA" data-file="videos/3.mp4" style="--bg:url('img/A y D.jpg')"></article>
+      </div>
+      <button class="scroll-btn left" aria-label="izquierda">‹</button>
+      <button class="scroll-btn right" aria-label="derecha">›</button>
+    </section>
+
+    <!-- CARTA -->
+    <section class="row" id="carta">
+      <h2>💌 Una carta para ti</h2>
+      <div class="letter-wrap">
+        <button class="letter-card" data-type="letter" data-action="open-letter">
+          <div class="play-icon">▶</div>
+          <div>Play</div>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <!-- MODAL GENÉRICO -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true">
+      <button class="modal-close" aria-label="Cerrar">✕</button>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- MODAL CARTA -->
+  <div class="letter-modal" id="letterModal" aria-hidden="true">
+    <div class="letter-content">
+      <button class="modal-close letter-close" aria-label="Cerrar">✕</button>
+      <div class="envelope">
+        <div class="flap"></div>
+        <div class="paper">
+          <h3>Para ti 💖</h3>
+          <p>
+            Gracias por estos 5 meses. Aunque estemos lejos, siento tu mano en la mía.
+            Eres mi hogar, mi calma y mi universo. Te elijo hoy y todos los días. ✨
+          </p>
+          <p>
+            P.D. Cuando estemos juntas, te invito a ver nuestra peli favorita con palomitas y besitos.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    Hecho con ❤️ para nosotras
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
